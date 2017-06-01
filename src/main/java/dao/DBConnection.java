@@ -1,10 +1,11 @@
-package system;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-// возможно, надо убравлять тредами для соединения
+// Create database connection
+// TODO возможно, надо убравлять тредами для соединения
 
 public class DBConnection {
     private static Connection connection;

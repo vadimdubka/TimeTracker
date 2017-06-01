@@ -1,9 +1,9 @@
-package logic;// Created by sky-vd on 24.03.2017.
+package service;// Created by sky-vd on 24.03.2017.
 
 // позволяет добавить, удалить или изменить информацию о работниках
 
 import entity.Employee;
-import system.DBConnection;
+import dao.DBConnection;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-import logic.EmplManagSystem;
+import service.EmplManagSystem;
 import entity.Employee;
 import org.junit.Test;
 

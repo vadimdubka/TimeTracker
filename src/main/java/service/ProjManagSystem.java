@@ -1,9 +1,9 @@
-package logic;
+package service;
 
 import entity.Project;
 import entity.Task;
 import entity.TimeQuant;
-import system.DBConnection;
+import dao.DBConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

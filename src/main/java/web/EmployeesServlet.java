@@ -1,6 +1,6 @@
 package web;// Created by sky-vd on 10.04.2017.
 
-import logic.EmplManagSystem;
+import service.EmplManagSystem;
 import entity.Employee;
 
 import javax.servlet.ServletException;
