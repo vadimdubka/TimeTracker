@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <tlib-version>1.2
+    </tlib-version><!--MANDATORY (the tag, not the value)— the developer puts it in to declare the version of the tag library.-->
+    <short-name>SampleTagLibrary</short-name><!--MANDATORY; mainly for tools to use-->
+
+    <uri>DiceFunctions</uri> <!--Определяем ссылку на нашу функцию-->
+    <function> <!--Определяем функцию-->
+        <name>rollIt
+        </name><!--Даем имя функции. Будет использоваться в JSP. Все теги, кроме этого имеют в названии function.-->
+        <function-class>example.DiceRoller</function-class> <!--Определяем класс, который скрывается под ссылкой выше-->
+        <function-signature> <!--The element for <function-signature> is there to tell the Container which method to call when the JSP uses the <name>. -->
+            int rollDice()
+        </function-signature>
+    </function>
+
+    <uri>randomThings</uri> <!--The unique name we use in the taglib directive-->
+    <tag>
+        <description>random advice</description> <!--Optional, but a really good idea-->
+        <name>advice</name><!--REQUIRED! This is what you use inside the tag (example: <my:advice>).-->
+        <tag-class>example.AdvisorTagHandler</tag-class><!--REQUIRED! This is how the Container knows what to call when someone uses the tag in a JSP.-->
+        <body-content>empty</body-content><!--REQUIRED! This says that the tag must NOT have anything in the body.-->
+        <attribute> <!--If your tag has attributes, then one <attribute> element per tag attribute is required.-->
+            <name>user</name> <!--This says you MUST put a “user” attribute in the tag.-->
+            <required>true</required><!--This says you MUST put a “user” attribute in the tag.-->
+            <rtexprvalue>true</rtexprvalue><!--This says the “user” attribute can be a RunTime EXpression VALUE (i.e. doesn’t have to be a String literal).-->
+        </attribute>
+    </tag>
+
+</taglib>
